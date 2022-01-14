@@ -1,0 +1,59 @@
+/* ************ Google fonts *************** */
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Oswald:wght@500;700&display=swap');
+
+/* 
+ font-family: 'Dongle', sans-serif;
+font-family: 'Oswald', sans-serif; 
+Oswald medium 500 and bold 700 
+Dongle regular 400 
+ */
+ 
+ /* 
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem
+The rem unit sets the font-size relative to the browsers base font-size, and will not inherit from its parents.
+  */
+ /* ************ Start of Reset styles *************** */
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ************ End of Reset styles *************** */
+
+/* ************ Start of css variables  *************** */
+:root{
+  --textColor : #3A3A3A;
+  --buttonColor : #E02C6D;
+  --dongleFontFamily :'Dongle', sans-serif; 
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.25rem;
+  --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
+  --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
+
+}
+/* ************* End  of css variables  *************** */
+
+/* ******** start of body styles ********* */
+body{
+  font-family: 'Dongle', sans-serif;
+  background: #AAAAAA; 
+  font-weight: 400;
+}
+/* ******** End of body styles ********* */
+
+/* **************** Start of  CSS global styles *************** */
+.section-center{
+    width: 85vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+/* **************** End of  CSS global styles *************** */
