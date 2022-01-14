@@ -20,11 +20,29 @@ Dongle regular 400
 32px = 2rem
 The rem unit sets the font-size relative to the browsers base font-size, and will not inherit from its parents.
   */
+
+  /* 
+h1 is   32px   (2em)
+h2 is   24px (1.5em)
+h3 is 20.8px (1.3em)
+h4 is   16px   (1em)
+h5 is 12.8px (0.8em)
+h6 is 11.2px (0.7em)
+   */
  /* ************ Start of Reset styles *************** */
- *{
+ /* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+} */
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* ************ End of Reset styles *************** */
 
@@ -32,9 +50,9 @@ The rem unit sets the font-size relative to the browsers base font-size, and wil
 :root{
   --textColor : #3A3A3A;
   --buttonColor : #E02C6D;
-  --dongleFontFamily :'Dongle', sans-serif; 
+  --OswaldFontFamily :'Oswald', sans-serif; 
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.25rem;
+  --mainSpacing: 0.12rem;
   --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
   --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
 
@@ -44,7 +62,8 @@ The rem unit sets the font-size relative to the browsers base font-size, and wil
 /* ******** start of body styles ********* */
 body{
   font-family: 'Dongle', sans-serif;
-  background: #AAAAAA; 
+  /* background: #AAAAAA;  */
+  background-color: #FFFFFF;
   font-weight: 400;
 }
 /* ******** End of body styles ********* */
@@ -52,8 +71,40 @@ body{
 /* **************** Start of  CSS global styles *************** */
 .section-center{
     width: 85vw;
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
     max-width: 1170px;
 }
-
+a{
+  text-decoration: none;
+}
 /* **************** End of  CSS global styles *************** */
+
+/* ********* start of header styles ************ */
+#header-container{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.website-name{
+font-family: var(--OswaldFontFamily);
+letter-spacing: var(--mainSpacing); 
+font-size: 1.5rem;
+text-transform: capitalize; 
+color: var(--textColor);
+}
+.navbar{
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-link a{
+  color: var(--textColor);
+  font-size: 1.5rem;
+  padding-left: 2rem; 
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.navbar .nav-link a i{
+  width: 36px;
+  height: 36px;
+}
+/* ********* end of header styles ************ */
