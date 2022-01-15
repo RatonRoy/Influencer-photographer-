@@ -1,11 +1,13 @@
 /* ************ Google fonts *************** */
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Oswald:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Roboto&display=swap');
 
 /* 
  font-family: 'Dongle', sans-serif;
 font-family: 'Oswald', sans-serif; 
 Oswald medium 500 and bold 700 
 Dongle regular 400 
+font-family: 'Roboto', sans-serif;
  */
  
  /* 
@@ -32,9 +34,9 @@ The rem unit sets the font-size relative to the browsers base font-size, and wil
 :root{
   --textColor : #3A3A3A;
   --buttonColor : #E02C6D;
-  --dongleFontFamily :'Dongle', sans-serif; 
+  --OswaldFontFamily : 'Oswald', sans-serif;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.25rem;
+  --mainSpacing: 0.12rem;
   --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
   --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
 
@@ -43,9 +45,8 @@ The rem unit sets the font-size relative to the browsers base font-size, and wil
 
 /* ******** start of body styles ********* */
 body{
-  font-family: 'Dongle', sans-serif;
-  background: #AAAAAA; 
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff; 
 }
 /* ******** End of body styles ********* */
 
@@ -55,5 +56,73 @@ body{
     margin: 0 auto;
     max-width: 1170px;
 }
+a{
+  text-decoration: none;
+}
+
 
 /* **************** End of  CSS global styles *************** */
+/* ******* start of  main section *********** */
+#home{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  min-height: 70vh; 
+  padding-top: 5rem;
+}
+.home-info{
+  width: 582px;
+  height: 270px;
+}
+.home-info-tittle{
+   font-family: var(--OswaldFontFamily); 
+   font-weight: 700;
+   letter-spacing: var(--mainSpacing); 
+   width: 582px;
+   text-transform: capitalize;
+   /* height: 133px; */
+   margin-bottom: 1.5rem; 
+
+}
+.info-text{
+  color: var(--textColor);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3rem;
+  text-align: justify;
+}
+.home-button{
+  background-color: var(--buttonColor);
+  color: white; 
+  padding: 0.7rem 1rem;
+  border-radius: 0.8rem; 
+  display: inline-block; 
+  border: 2px solid var(--buttonColor); 
+  transition: var(--mainTransition); 
+  text-transform: capitalize;
+}
+.home-button:hover{
+  background-color: white;
+  color: var(--buttonColor);
+}
+.home-img{
+  width: 475px;
+  height: 475px; 
+  background-image: url(../images/Group\ 33091.svg); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-img img{
+   width: 440px;
+   height: 414px; 
+   transition: var(--mainTransition);
+}
+.home-img img:hover{
+  transform: scale(1.3);
+}
+/* ******* end  of  main section *********** */
