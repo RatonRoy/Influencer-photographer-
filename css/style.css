@@ -2,26 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Oswald:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Roboto&display=swap');
 
-/* 
- font-family: 'Dongle', sans-serif;
-font-family: 'Oswald', sans-serif; 
-Oswald medium 500 and bold 700 
-Dongle regular 400 
-font-family: 'Roboto', sans-serif;
- */
- 
- /* 
-10px = 0.625rem
-12px = 0.75rem
-14px = 0.875rem
-16px = 1rem (base)
-18px = 1.125rem
-20px = 1.25rem
-24px = 1.5rem
-30px = 1.875rem
-32px = 2rem
-The rem unit sets the font-size relative to the browsers base font-size, and will not inherit from its parents.
-  */
  /* ************ Start of Reset styles *************** */
  *{
     padding: 0;
@@ -54,13 +34,12 @@ body{
 .section-center{
     width: 85vw;
     margin: 0 auto;
-    max-width: 1170px;
+    max-width: 1170px; 
+    padding: 2rem 0;
 }
 a{
   text-decoration: none;
 }
-
-
 /* **************** End of  CSS global styles *************** */
 /* ******* start of  main section *********** */
 #home{
@@ -68,7 +47,7 @@ a{
   justify-content: space-between; 
   align-items: center; 
   min-height: 70vh; 
-  padding-top: 5rem;
+ padding: 3rem 0;
 }
 .home-info{
   width: 582px;
@@ -126,3 +105,202 @@ a{
   transform: scale(1.3);
 }
 /* ******* end  of  main section *********** */
+/* ******** start of  website logo section******** */
+#logo-container{
+  
+}
+.logs{
+  padding: 3rem 0;
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;  
+  border-bottom: 1px solid rgba(128, 128, 128, 0.575); 
+  border-top: 1px solid rgba(128, 128, 128, 0.575); 
+}
+.logs a{
+  display: block;
+}
+/* ******** end of  website logo section******** */
+/* ********* start of product section styles ******** */
+#product-section{
+  
+}
+.product-section-tittle{
+  text-align: center; 
+  font-family: var(--OswaldFontFamily);
+  font-weight: 700;
+  letter-spacing: var(--mainSpacing); 
+  color: var(--textColor); 
+  padding-bottom: 2rem;
+}
+.products-container{
+  background-color:#cec5c5; 
+  display: grid; 
+  grid-template-columns: repeat(3, 330px); 
+  justify-content: space-between; 
+  grid-row-gap: 2rem; 
+  padding: 1rem;
+}
+/* ** start of  single product styles** */
+.product{
+  background-color: white; 
+  width: 329px;
+  height: 476px; 
+  padding: 1rem; 
+  border-radius: 0.5rem; 
+  box-shadow: var(--darkShadow);
+  transition: var(--mainTransition);
+}
+.product:hover{
+  transform: scale(1.05);
+}
+.product-img{
+  text-align: center; 
+}
+.product-img img{
+  width: 300px;
+  height: 256px;
+  display: block; 
+  border-radius: 0.5rem;
+}
+.product-tittle{
+  font-family: var(--OswaldFontFamily);
+  font-weight: 500;
+  padding: 1rem 0; 
+  color: #18191F; 
+  letter-spacing: var(--mainSpacing);
+}
+.product-value{
+  color: black; 
+  letter-spacing: 1px;
+}
+.product-rating{
+  padding: 1rem 0; 
+}
+.product-rating .star-icon{
+  color: rgb(238, 84, 84);
+}
+.rating-value{
+  color: blue;
+  font-family: var(--OswaldFontFamily);
+  font-weight: 700;
+}
+.product-text{
+  color: var(--textColor); 
+  line-height: 1rem; 
+  letter-spacing: 1px;
+}
+/* ** end of  single product styles** */
+.product-button{
+  display: flex; 
+  justify-content: flex-end; 
+  padding-top: 2rem;
+}
+.product-button a{
+  display: block;
+  font-family: var(--OswaldFontFamily);
+  font-weight: 700;
+  color: var(--buttonColor); 
+  letter-spacing: var(--mainSpacing); 
+  font-size: 1.5rem;
+}
+/* ********* end of  product section styles ******** */
+/* ****** contact-section******* */
+#contact-section{
+  min-height: 50vh; 
+}
+.contact-tittle{
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: brown; 
+  text-align: center; 
+  font-family: var(--OswaldFontFamily); 
+  font-size: 700;
+}
+.input-group{
+    width: 80vw;
+    max-width: 700px;
+    margin: 0 auto; 
+} 
+label{
+  text-transform: capitalize; 
+  font-family: var(--OswaldFontFamily); 
+  letter-spacing: 2px; 
+  font-weight: 700; 
+  display: block;
+  margin: 1rem 0 0 0;
+}
+input[type = text],input[type = email], input[type = number]{
+  width: 80%;
+  padding: 0.5rem 1rem 0.5rem 0;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0px 0px 1px 0;  
+  display: block;
+}
+input[type = text],::placeholder {
+  color: red;
+  text-align: center;
+  letter-spacing: 4px;
+}
+input:focus{
+  background-color:rgb(190, 185, 185);
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 1px; 
+}
+.submission{
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 0.5rem;
+}
+.submit-button{
+  background-color: rgb(38, 83, 231);
+  color: white;
+  border: 1px solid skyblue; 
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer; 
+  border-radius: 5px;
+}
+.reset-button{
+  background-color: red;
+  color: white;
+  border: 2px solid red; 
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer; 
+  border-radius: 5px;
+}
+/* ****** end contact-section******* */
+/* ******* start footer styles ****** */
+footer{
+  background-color: rgb(10, 8, 38);
+  color: whitesmoke;
+  /* min-height: 40vh; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center; 
+  padding: 4rem 1rem;
+}
+.footer-tittle{
+  font-family: var(--OswaldFontFamily); 
+   font-weight: 700;
+   letter-spacing: var(--mainSpacing); 
+   text-transform: capitalize;
+}
+.footer-text{
+  font-size: 1.2rem; 
+  letter-spacing: 1px; 
+  padding: 1rem 0;
+}
+.footer-icon a {
+   background-color: rgb(29, 25, 25);
+   color: whitesmoke; 
+   font-size: 1.5rem; 
+   margin-left: 1rem; 
+   padding: 0.5rem;
+   border-radius: 50%;
+}
+/* ******* end footer styles ****** */
