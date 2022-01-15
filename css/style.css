@@ -41,6 +41,33 @@ a{
   text-decoration: none;
 }
 /* **************** End of  CSS global styles *************** */
+
+/* ********* start of header styles ************ */
+.header-container{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 2rem 0;
+}
+.website-name{
+font-family: var(--OswaldFontFamily);
+letter-spacing: var(--mainSpacing); 
+font-size: 1.5rem;
+text-transform: capitalize; 
+color: var(--textColor);
+}
+.navbar{
+
+}
+.navbar a{
+  color: var(--textColor);
+  font-size: 1.5rem;
+  padding-left: 2rem; 
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+/* ********* end of header styles ************ */
+
 /* ******* start of  main section *********** */
 #home{
   display: flex;
