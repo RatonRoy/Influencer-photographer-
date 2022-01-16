@@ -47,7 +47,10 @@ a{
   display: flex;
   justify-content: space-between; 
   align-items: center; 
-  padding: 2rem 0;
+  /* padding: 1rem 0; */
+}
+.align-justify{
+  display: none;
 }
 .website-name{
 font-family: var(--OswaldFontFamily);
@@ -55,6 +58,9 @@ letter-spacing: var(--mainSpacing);
 font-size: 1.5rem;
 text-transform: capitalize; 
 color: var(--textColor);
+}
+.shopping-cart{
+  display: none;
 }
 .navbar{
 
@@ -78,13 +84,13 @@ color: var(--textColor);
 }
 .home-info{
   width: 582px;
-  height: 270px;
+  /* height: 270px; */
 }
 .home-info-tittle{
    font-family: var(--OswaldFontFamily); 
    font-weight: 700;
    letter-spacing: var(--mainSpacing); 
-   width: 582px;
+   /* width: 582px; */
    text-transform: capitalize;
    /* height: 133px; */
    margin-bottom: 1.5rem; 
@@ -134,7 +140,6 @@ color: var(--textColor);
 /* ******* end  of  main section *********** */
 /* ******** start of  website logo section******** */
 #logo-container{
-  
 }
 .logs{
   padding: 3rem 0;
@@ -143,9 +148,10 @@ color: var(--textColor);
   justify-content: space-between;  
   border-bottom: 1px solid rgba(128, 128, 128, 0.575); 
   border-top: 1px solid rgba(128, 128, 128, 0.575); 
+  width: 100%;
 }
 .logs a{
-  display: block;
+  /* display: block; */
 }
 /* ******** end of  website logo section******** */
 /* ********* start of product section styles ******** */
@@ -288,7 +294,9 @@ input:focus{
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer; 
-  border-radius: 5px;
+  border-radius: 5px; 
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
 }
 .reset-button{
   background-color: red;
@@ -298,6 +306,8 @@ input:focus{
   font-size: 1rem;
   cursor: pointer; 
   border-radius: 5px;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
 }
 /* ****** end contact-section******* */
 /* ******* start footer styles ****** */
@@ -330,4 +340,120 @@ footer{
    padding: 0.5rem;
    border-radius: 50%;
 }
-/* ******* end footer styles ****** */
+/* ******* end of footer styles ****** */
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+ .navbar{
+   display: none;
+ }
+ .align-justify{
+   display: block;
+ }
+ .shopping-cart{
+   display: block; 
+   font-size: 1.5rem;
+   color: rgb(238, 84, 84);
+ }
+ .shopping-cart a{
+   font-size: 1.5rem;
+   color: var(--textColor);
+ }
+ 
+  /*  end header */
+  /* start main section  */
+  #home{
+    flex-direction: column; 
+    /* align-items: center;  */
+  }
+  .home-img{
+    order: 1;
+  }
+  .home-info{
+    order: 2; 
+    text-align: center;
+    width: 380px;
+    padding-top: 1rem;
+  }
+  .info-text{
+    /* text-align: center; */
+  }
+  .home-info-tittle{
+    text-align: center;
+  }
+  /* end main section  */
+  #logo-container{
+    display: none;
+  }
+  
+	/* prodect section */
+  .products-container{
+    grid-template-columns: 1fr; 
+    justify-content: center;
+  }
+  .product{
+    margin: 0 auto;
+  }
+	/* end of prodect section */
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* header */
+ .navbar{
+   display: none;
+ }
+ .align-justify{
+   display: block;
+ }
+ .shopping-cart{
+   display: block; 
+ }
+ .shopping-cart a{
+   font-size: 1.5rem;
+   color: var(--textColor);
+ }
+ 
+  /*  end header */
+	 /* start main section  */
+  #home{
+    flex-direction: column; 
+  }
+  .home-img{
+    order: 1;
+  }
+  .home-info{
+    order: 2; 
+    text-align: center;
+    width: 768px;
+    padding-top: 1rem;
+  }
+  .info-text{
+    text-align: justify;
+  }
+  .home-info-tittle{
+  }
+  /* end main section  */
+  /* product sections */
+  .products-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product{
+    margin: 0 auto;
+  }
+  /* end of  product sections */
+	
+}
